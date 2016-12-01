@@ -1,0 +1,453 @@
+nav.navbar.navbar-default{
+   min-height: 70px;
+   width: 100%;
+   background: #fff;
+   display: flex;
+   align-items: center;
+   box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+   border-radius: 0px;
+   margin: 0;
+}
+.nav-wrapper{
+   padding: 0px 150px;
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+img.navbar-logo{
+   height:40px;
+   width: auto;
+   float: left;
+   position: absolute;
+   z-index: 100;
+   top:15px;
+}
+a.get-help,a.guide-me{
+   padding: 10px 30px;
+   background-color: rgba(254, 182, 38,0.9);
+   color: rgba(0,0,0,0.6);
+   font-weight: bold;
+   border-radius: 4px;
+}
+a.get-help i,a.guide-me i{
+   padding-right: 10px;
+}
+a.guide-me{
+   padding: 8px 10px;
+   position: absolute;
+   right: 30px;
+   display: none;
+}
+div.panel.open a.guide-me{
+   display: block;
+}
+a:focus,a:hover{
+  outline: none;
+  text-decoration: none;
+}
+section.update-header{
+   height: 500px;
+   background: url(assets/cover.png);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   flex-direction: column;
+   padding-top: 100px;
+   position: relative;
+}
+.update-header h2{
+   color: #fff;
+   font-size: 40px;
+}
+.update-header p.update-des{
+   color: rgba(255,255,255,0.6);
+   font-size: 20px;
+   margin-top: 30px;
+}
+section.update-info{
+   margin-top: -130px;
+   padding: 0px 150px;
+   position: relative;
+   z-index: 999;
+}
+
+/******************************
+Panels
+******************************/
+.panel-group .panel+.panel{
+   margin-top: 0px;
+   border: none;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+   border-radius: 0px;
+}
+.panel-group .panel+.panel.open{
+   margin: 0px 0px;
+}
+.panel-group div.panel{
+   border-radius: 0px;
+}
+.panel-group div.panel.open{
+   margin: 0px 0px;
+   margin-top: 0px;
+   border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.panel{
+   border-radius: 0px;
+}
+.panel div.panel-heading{
+  height: 70px;
+  background: #fff;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0px;
+}
+h4.panel-title{
+  font-size: 20px;
+  position: relative;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+}
+h4.panel-title a{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+div.panel-heading span.expand{
+  position: absolute;
+  right: 30px;
+  top: 35%;
+  cursor: pointer;
+}
+
+div.panel-heading span.complete{
+  position: absolute;
+  right:60px;
+  top: 35%;
+  color: #094a7e;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: none;
+}
+span.panel-icon i{
+  color: #444;
+  font-size: 30px;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+.panel-default>.panel-heading+.panel-collapse>.panel-body{
+  border:none;
+  padding: 0px 20px 20px 20px;
+}
+div.text-field{
+  width: 100%;
+  margin: 30px 0px;
+}
+div.text-field span.label{
+  color:#094a7e;
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+}
+textarea, div.text-field input[type=text],div.text-field input[type=url]{
+  border: 1px solid rgba(0,0,0,0.3);
+  background: #f9fafb;
+  color:#444;
+  width: 100%;
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 3px;
+  position: relative;
+}
+form div.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+form div.footer input[type=submit],input[type=file]{
+  background: #444;
+  border: none;
+  color: #fff;
+  padding: 10px 40px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.panel.complete div.panel-heading span.complete{
+  display: block;
+}
+.panel.complete div.panel-heading h4 a{
+    opacity: 0.3;
+}
+.panel.complete div.panel-heading h4.panel-title a span.panel-icon{
+  text-decoration: none;
+}
+.panel.complete div.panel-heading h4.panel-title a span.title{
+  text-decoration: line-through;
+}
+.panel.open div.panel-heading span.complete,.panel.open div.panel-heading span.expand{
+   display: none;
+}
+div.update-progress{
+   display: flex;
+   width: 100%;
+   padding: 0px 15%;
+   position: relative;
+   flex-direction: column;
+   position: absolute;
+   bottom: 160px;
+   left: 0;
+   font-weight: bold;
+}
+div.update-progress span.completed{
+   color: rgb(254, 182, 38);
+   position: absolute;
+   left: 15%;
+   top: -30px;
+}
+div.update-progress span.remaining{
+   color: rgba(255,255,255,0.6);
+   position: absolute;
+   right: 15%;
+   top: -30px;
+}
+progress {
+  display: block;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.1);
+  height: 10px;
+  width: 100%;
+  border: none;
+}
+progress::-webkit-progress-bar {
+   background-color:rgba(255,255,255,0.1);
+   border-radius: 5px;
+}
+progress::-webkit-progress-value {
+  background-color: rgb(254, 182, 38);
+  border-radius: 5px;
+  border: none;
+}
+progress::-moz-progress-bar {
+   background-color: rgb(254, 182, 38);
+   border-radius: 5px;
+   border: none;
+}
+/******************************
+Video Section
+******************************/
+section.video-guide{
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+   position: relative;
+}
+div.video-title{
+   width: 100%;
+   top: 0px;
+   color: #444;
+   padding: 50px 0px;
+   text-align: center;
+   font-weight: 600;
+   font-size: 30px;
+}
+div.video-title span{
+   font-size:20px;
+   font-weight:normal;
+   display: block;
+   margin-bottom: 20px;
+}
+iframe#ytplayer{
+   display: block;
+   width: 84%;
+   height: 500px;
+   margin: 0px 8%;
+   margin-top: 10px;
+   box-shadow: 0px 10px 28.5px 1.5px rgba(0, 0, 0, 0.2);
+   padding: 10px;
+   padding-bottom: 0px;
+   background: #fff;
+}
+/********************************
+Mobile Responsive
+********************************/
+@media only screen and (min-width:320px) and (max-width:700px) {
+   .nav-wrapper{
+      padding: 0px 30px;
+   }
+   img.navbar-logo{
+      height:30px;
+      top:20px;
+   }
+   section.update-header{
+      height: 400px;
+      padding: 30px 30px;
+      position: relative;
+   }
+   .update-header h2{
+      font-size: 25px;
+      line-height: 1.5;
+      text-align: center;
+   }
+   .update-header p.update-des{
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: center;
+   }
+   section.update-info{
+      margin-top: -130px;
+      padding: 0px 30px;
+      overflow: hidden;
+   }
+   /******************************
+   Panels
+   ******************************/
+   .panel div.panel-heading{
+     height: 50px;
+   }
+   h4.panel-title{
+     font-size: 15px;
+   }
+   div.panel-heading span.expand{
+     position: absolute;
+     right: 30px;
+     top: 35%;
+   }
+   div.panel-heading span.complete{
+     display: none;
+   }
+   span.panel-icon i{
+     font-size: 20px;
+     padding: 0px 10px 0px 15px;
+   }
+   .panel-default>.panel-heading+.panel-collapse>.panel-body{
+     padding: 15px;
+   }
+   div.text-field{
+     margin: 15px 0px;
+   }
+   div.text-field span.label{
+     font-size: 13px;
+  }
+   textarea, div.text-field input[type=text],div.text-field input[type=url]{
+      font-size: 11px;
+      padding: 5px 10px;
+      margin-top: 10px;
+   }
+   .panel.complete div.panel-heading span.complete{
+     display: none;
+   }
+   a.guide-me{
+      padding: 5px 10px;
+      font-size: 10px;
+      position: absolute;
+      right: 10px;
+      display: none;
+   }
+   /******************************
+   Video Section
+   ******************************/
+   iframe#ytplayer{
+      height: 200px;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+   }
+   div.video-title{
+      padding: 20px 0px;
+      font-size: 20px;
+   }
+   div.video-title span{
+      font-size:14px;
+      margin-bottom: 10px;
+   }
+
+}
+@media only screen and (min-width:701px) and (max-width:1024px) {
+   .nav-wrapper{
+      padding: 0px 100px;
+   }
+   img.navbar-logo{
+      height:30px;
+      top:20px;
+   }
+   section.update-header{
+      height: 450px;
+      padding: 50px 100px;
+      position: relative;
+   }
+   .update-header h2{
+      font-size: 25px;
+      text-align: center;
+   }
+   .update-header p.update-des{
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: center;
+   }
+   section.update-info{
+      margin-top: -130px;
+      padding: 0px 100px;
+   }
+   /******************************
+   Panels
+   ******************************/
+   .panel div.panel-heading{
+     height: 60px;
+   }
+   h4.panel-title{
+     font-size: 20px;
+   }
+   div.panel-heading span.expand{
+     position: absolute;
+     right: 30px;
+     top: 35%;
+   }
+   div.panel-heading span.complete{
+     display: none;
+   }
+   span.panel-icon i{
+     font-size: 25px;
+     padding: 20px 10px 0px 20px;
+   }
+   div.text-field{
+     margin: 15px 0px;
+   }
+   div.text-field span.label{
+     font-size: 12px;
+   }
+   textarea, div.text-field input[type=text],div.text-field input[type=url]{
+      font-size: 15px;
+      padding: 8px 10px;
+      margin-top: 10px;
+   }
+   /******************************
+   Video Section
+   ******************************/
+   iframe#ytplayer{
+      height: 400px;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+   }
+   div.video-title{
+      padding: 20px 0px;
+      font-size: 20px;
+   }
+   div.video-title span{
+      font-size:14px;
+      margin-bottom: 10px;
+   }
+}

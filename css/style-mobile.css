@@ -6,14 +6,240 @@ background: #fff;
 display: flex;
 align-items: center;
 }
+.desktop-only{
+  display: none;
+}
+/************************
+Staff Directory
+************************/
+section.staff-directory
+{
+  background-color: #f4f4f4;
+  padding-top: 50px;
+}
+section.staff-directory ul.nav-tabs{
+  padding: 10px 150px;
+  padding-bottom: 0px;
+  display: none;
+}
+section.staff-directory ul.nav.nav-tabs li a{
+  font-weight: bold;
+  color: #444;
+}
+.teachers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 50px 150px;
+}
+ul li.teachers{
+  padding: 30px 30px 100px 30px;
+}
+.teachers div.teacher{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  padding: 0px 5%;
+}
+div.teacher a.img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: transparent;
+  background-image: url(../assets/cover_phone.jpg);
+  background-size: cover;
+  background-position: center;
+}
+div.teacher p.name{
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+div.teacher p.subject{
+  font-size: 15px;
+  color: rgba(0,72,128,1);
+  font-weight: bold;
+}
+div.teacher p.description{
+  display: none;
+}
+div.teacher ul.social-links{
+   display: none;
+}
+a.slider-nav{
+  position: absolute;
+  font-size: 30px;
+  color: #444;
+}
+a.slider-nav.right{
+  right: 20px;
+  margin-top: -200px;
+}
+a.slider-nav.left{
+  left: 20px;
+  margin-top: -200px;
+}
+/************************
+Quick Link Slider
+************************/
+section.quicklinks{
+  background: #212121;
+  background-size: cover;
+  background-position: center;
+  height:400px;
+}
+section.quicklinks div.contents{
+  background: transparent;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  padding: 50px 0px;
+}
+div.qlinks{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div.qlinks ul{
+  background: rgba(0,0,0,0);
+}
+div.qlinks ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  padding: 0px 40px;
+  transition: opacity 0.55s;
+  margin-top: 170px;
+}
+div.qlinks ul li img.ph{
+  height: 150px;
+}
+div.qlinks ul li.unslider-active{
+  opacity: 1;
+}
+div.qlinks ul li a{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  padding: 0px;
+  border: 0px solid rgba(255,255,255,0.5);
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+div.qlinks ul li a img{
+  border-radius: 20%;
+  height: 100%;
+  width: auto;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+div.qlinks ul li a:hover{
+  border-color: #fff;
+}
+div.qlinks ul li a:hover img{
+  width: auto;
+  opacity: 1;
+}
+div.qlinks ul li a span{
+  position: absolute;
+  color: #fff;
+  bottom: -40px;
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0.5;
+  text-align: center;
+}
+div.qlinks ul li a:hover span{
+  opacity: 1;
+}
+a.qlink-nav{
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+}
+a.qlink-nav.right{
+  right: 30px;
+  margin-top: 140px;
+}
+a.qlink-nav.left{
+  left: 30px;
+  margin-top: 140px;
+}
+/*****************************
+Cover
+*****************************/
 .cover{
    height:115vh;
+   min-height: 700px;
    background: url(../assets/cover_phone.jpg);
    background-size:cover;
    background-position:center;
    display:flex;
    flex-direction:column;
    justify-content:space-between;
+   position: relative;
+}
+.featured-events,.latest-news{
+  position: relative;
+  padding-bottom: 50px;
+}
+a.view-btn{
+  text-transform: uppercase;
+  padding: 10px 0px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(254, 182, 38);
+  position: absolute;
+  left:25%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  bottom:0px;
+  border: 2px solid rgb(254, 182, 38);
+}
+.cover-content,.vcover-content{
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+}
+.cover-content div.text,.vcover-content div.text,{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;;
+  padding:0px 40px;
+}
+
+.cover-content div.text p.cover-title,.vcover-content div.text p.cover-title{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  bottom: 450px;
+}
+
+.cover-content div.text p.cover-description,.vcover-content div.text p.cover-description{
+  display: none;
+}
+
+.thumbnail{
+  display: none;
 }
 .nav-wrapper{
    padding: 0px 20px;
@@ -41,6 +267,7 @@ ul.social-links{
    flex-direction: row;
    padding: 0;
    padding-left: 15px;
+   margin: 0;
 }
 ul.social-links li{
    width: 40px;
@@ -56,23 +283,36 @@ ul li a.social-icon{
    text-decoration: none;
    font-size: 10px;
 }
-/****************Footer*************************/
+
+/****************
+Footer
+****************/
 section.footer{
   background: #212121;
   display: block;
-  height: 410px;
+  height: 510px;
   padding: 30px 60px;
   position: relative;
   padding-top: 200px;
 }
 .footer div h2.f-title{
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 20px;
   font-weight: normal;
+  text-align: center;
 }
 .footer div.location{
   width: 100%;
   display: inline-block;
+  padding-top: 25px;
+}
+.footer div.location p.address{
+   margin: 20px 0px;
+   text-align: center;
+}
+.footer div.location p.address span{
+   padding: 0;
+   margin: 0;
 }
 .footer div.map{
   width: 100%;
@@ -115,7 +355,6 @@ div.branding>ul>li>a{
   color: #fff;
   font-size: 1.5rem;
   padding: 10px;
-
 }
 .footer>div>p{
   color:#fff;
@@ -129,22 +368,23 @@ div.branding>ul>li>a{
 section.footer div h2.f-title>i{
   padding-right: 20px;
 }
-
-/****************Social Media*******************/
+/****************
+Social Media
+****************/
 section.social-media{
   display: flex;
   flex-direction: column-reverse;
   padding: 30px 60px;
   background-color: #094A7E;
-  height: 500px;
+  height: 560px;
   position: relative;
   padding-top: 130px;
 }
 h2.sm-title{
   font-weight: bold;
   color: #fff;
-  font-size: 1rem;
-  margin-bottom: 40px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 h2.sm-title i.fa{
   margin-right: 10px;
@@ -164,8 +404,7 @@ section.social-media div.subscribe-form{
 div.subscribe-form h2.sm-title{
   text-align: center;
   color: #444;
-  padding: 0px 10px;
-  padding-top: 10px;
+  padding: 20px 0px 30px 0px;
 }
 div.form{
   position: relative;
@@ -179,9 +418,9 @@ input[type=email] {
   width: 80%;
   left: 10%;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 13px;
   border: 1px solid rgba(0,0,0,0.1);
-  margin-bottom: 100px;
+  margin-bottom: 90px;
 }
 input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
   outline: none;
@@ -191,7 +430,8 @@ input[type=submit]{
   padding: 13px;
   font-weight: normal;
   color:#000;
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: 600;
   border: 0;
   border-radius: 0px;
   font-family: "Open Sans",sans-serif;
@@ -206,7 +446,7 @@ input[type=submit]:hover{
 }
 form>i{
   position: absolute;
-  top:11px;
+  top:15px;
   left:14%;
 }
 div.recent-tweets{
@@ -217,13 +457,13 @@ div.recent-tweets{
   margin: 20px 0px;
 }
 p.author{
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: bold;
   color: #fff;
   margin: 0;
 }
 p.post{
-  font-size: 1.0rem;
+  font-size: 14px;
   font-weight: normal;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -231,6 +471,7 @@ p.post{
 div.instagram-posts{
   width: 100%;
   display: block;
+  margin-top: 20px;
 }
 
 .posts div.i-post{
@@ -254,7 +495,7 @@ div.instagram-posts{
 .progress{
    display:flex;
    background: rgba(0,72,128,0.8);
-   bottom:25px;
+   bottom:110px;
    height: 220px;
    width:60%;
    margin:0px 20%;
@@ -299,8 +540,8 @@ div.instagram-posts{
 }
 
 .subscribe{
-   padding-bottom:25px;
-   height: 149px;
+   padding-bottom:20px;
+   min-height: 160px;
    display: flex;
    flex-direction:column;
    background: #3b4b64;
@@ -313,9 +554,14 @@ div.instagram-posts{
    font-weight:bold;
    color:#fff;
    font-style:italic;
-   font-size:13px
+   font-size:15px;
+   padding: 5px;
+   position: absolute;
+   bottom: 70px;
 }
-/*********About School Container**********/
+/*****************************
+About School Container
+*****************************/
    .sub-container{
       padding: 20px 40px;
    }
@@ -337,8 +583,7 @@ div.instagram-posts{
       line-height: 1.8;
       font-size: 16px;
       font-weight: 400;
-      text-align: center;
-      padding-bottom: 20px;
+      padding:20px 0px;
       text-align:justify;
    }
 
@@ -363,7 +608,7 @@ div.instagram-posts{
       text-transform: uppercase;
       color: #094a7e;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 25px;
       width: 100%;
       text-align: center;
       padding-bottom: 20px;
@@ -402,8 +647,8 @@ div.instagram-posts{
 
    section.fe-ln{
       background:#f8f8f8;
-      padding: 20px 40px;
-      padding-bottom: 140px;
+      padding: 40px;
+      padding-bottom: 60px;
    }
    section.latest-news{
       margin-top:40px;
@@ -450,20 +695,24 @@ div.instagram-posts{
    }
    .f-event .body p.time-venue,.l-news .body p.time-venue{
       font-size: 15px;
-      font-weight: 500;
-      color: rgba(0,0,0,0.5);
+      font-weight: 600;
+      color: rgba(0,0,0,0.4);
+      padding-top: 5px;
+   }
+   .f-event .body p.time-venue{
+      margin-top: 20px;
    }
    h3.event-title{
       margin:0;
+      font-size: 18px;
+      font-weight: 600;
    }
    h3.event-title.event{
-      margin:0;
-      margin-left:42px;
+      margin:5px 0px 0px 42px;
    }
    p.description{
       margin-bottom:0px;
-   }
-   section.quicklinks{
-      display:none;
+      margin-top: 10px;
+      font-size: 14px;
    }
 }

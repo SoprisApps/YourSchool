@@ -8,14 +8,256 @@ align-items: center;
 position: relative;
 z-index: 9999;
 }
+.desktop-only{
+  display: none;
+}
+a.view-btn{
+  text-transform: uppercase;
+  padding: 10px 0px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(254, 182, 38);
+  position: absolute;
+  left:40%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  bottom:0px;
+  border: 2px solid rgb(254, 182, 38);
+}
+.latest-news{
+  border-top: 2px solid rgba(0,0,0,0.1);
+  padding-top: 40px;
+}
+/************************
+Quick Link Slider
+************************/
+section.quicklinks{
+  background: #212121;
+  background-size: cover;
+  background-position: center;
+}
+section.quicklinks div.contents{
+  background: transparent;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative;
+  padding: 40px 0px;
+}
+div.qlinks{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+div.qlinks ul{
+  background: rgba(0,0,0,0);
+}
+
+div.qlinks ul li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  opacity: 1;
+  padding: 0px 120px;
+  transition: opacity 0.55s;
+  margin-top: 130px;
+}
+div.qlinks ul li img.ph{
+  height: 150px;
+}
+div.qlinks ul li.unslider-active{
+  opacity: 1;
+}
+div.qlinks ul li a{
+  display: flex;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  padding: 0px;
+  border: 0px solid rgba(255,255,255,0.5);
+  border-radius: 20%;
+  justify-content: center;
+  align-items: center;
+}
+div.qlinks ul li a img{
+  border-radius: 20%;
+  height: 100%;
+  width: auto;
+  opacity: 0.5;
+  transition: all 0.25s;
+}
+div.qlinks ul li a:hover{
+  border-color: #fff;
+}
+div.qlinks ul li a:hover img{
+  width: auto;
+  opacity: 1;
+}
+div.qlinks ul li a span{
+  position: absolute;
+  color: #fff;
+  bottom: -40px;
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0.5;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+div.qlinks ul li a:hover span{
+  opacity: 1;
+}
+a.qlink-nav{
+  position: absolute;
+  font-size: 40px;
+  color: #fff;
+}
+a.qlink-nav.right{
+  right: 20px;
+  margin-top: 120px;
+}
+a.qlink-nav.left{
+  left: 20px;
+  margin-top: 120px;
+}
+/************************
+Staff Directory
+************************/
+section.staff-directory
+{
+   background-color: #f4f4f4;
+   padding-top: 50px;
+}
+section.staff-directory ul.nav-tabs{
+   padding: 10px 150px;
+   padding-bottom: 0px;
+}
+section.staff-directory ul.nav.nav-tabs li a{
+   font-weight: bold;
+   color: #444;
+}
+div.tab-content{
+   background: #fff;
+}
+.teachers{
+   background-color: #fff;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 50px 150px;
+}
+ul li.teachers{
+   padding: 30px 80px;
+}
+.teachers div.teacher{
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   align-items: center;
+}
+div.teacher a.img{
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   color: transparent;
+   background-image: url(../assets/cover_phone.jpg);
+   background-size: cover;
+   background-position: center;
+}
+div.teacher p.name{
+   font-size: 17px;
+   font-weight: bold;
+   text-transform: uppercase;
+   margin-top: 10px;
+}
+div.teacher p.subject{
+   font-size: 15px;
+   color: rgba(0,72,128,1);
+   font-weight: bold;
+}
+div.teacher p.description{
+   text-align: center;
+   width: 90%;
+   font-size: 15px;
+}
+div.teacher ul.social-links{
+   list-style: none;
+   display: flex;
+   flex-direction: row;
+   padding-top: 15px;
+}
+div.teacher ul.social-links li{
+   width:30px;
+}
+a.slider-nav{
+   position: absolute;
+   font-size: 30px;
+   color: #444;
+}
+a.slider-nav.right{
+   right: 30px;
+   margin-top: -200px;
+}
+a.slider-nav.left{
+   left: 30px;
+   margin-top: -200px;
+}
+/**************************
+Cover
+**************************/
 .cover{
-   height:70vh;
+   height:700px;
    background: url(../assets/cover.jpeg);
    background-size:cover;
    background-position:center;
    display:flex;
    flex-direction:column;
    justify-content:space-between;
+   position: relative;
+}
+.cover-content,.vcover-content{
+  height: 100%;
+  width: 100%;
+  background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+}
+.cover-content div.text,.vcover-content div.text{
+  position: absolute;
+  bottom:100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding:0px 40px;
+}
+
+.cover-content div.text p.cover-title, .vcover-content div.text p.cover-title{
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+  text-align: right;
+  width: 35%;
+  margin-right: 40px;
+}
+.cover-content div.text p.cover-description,.vcover-content div.text p.cover-description{
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  float: right;
+  text-align: left;
+  width: 50%;
+}
+
+.desktop{
+  display: none;
 }
 .nav-wrapper{
    padding: 0px 60px;
@@ -76,8 +318,9 @@ ul li a.social-icon:hover i{
 section.footer{
   background: #212121;
   display: block;
-  height: 410px;
+  height: 350px;
   padding: 30px 60px;
+  position: relative;
 }
 .footer div h2.f-title{
   color: #fff;
@@ -87,6 +330,7 @@ section.footer{
 .footer div.location{
   width: 50%;
   display: inline-block;
+  margin-top: 50px;
 }
 .footer div.map{
   width: 45%;
@@ -108,16 +352,13 @@ section.footer{
   justify-content: space-between;
   float: right;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 140px;
   position: relative;
 }
 div.branding>a>img{
   height: 40px;
   width: auto;
   float: left;
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 div.branding>ul{
   float: right;
@@ -134,7 +375,8 @@ div.branding>ul>li>a{
 }
 .footer>div>p{
   color:#fff;
-  font-size: 0.95rem;
+  font-size: 14px;
+  padding: 10px 0px;
 }
 .footer>div>p span{
   color:rgb(254, 182, 38);
@@ -154,7 +396,7 @@ section.social-media{
 h2.sm-title{
   font-weight: 500;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 h2.sm-title i.fa{
@@ -163,7 +405,8 @@ h2.sm-title i.fa{
 section.social-media div.subscribe-form{
   width: 80%;
   display: inline-block;
-  padding: 0px 10%;
+  padding: 0px 5%;
+  margin:  0px 5%;
   padding-bottom: 40px;
   margin-bottom: 30px;
   border-bottom: 2px solid rgba(255,255,255,0.3)
@@ -181,7 +424,7 @@ input[type=email] {
   display: inline-block;
   border: 0;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 14px;
 }
 input[type=email]:hover,input[type=email]:focus,input[type=submit]:hover,input[type=submit]:focus{
   outline: none;
@@ -191,12 +434,16 @@ input[type=submit]{
   padding: 13px 10%;
   font-weight: normal;
   color:#000;
-  font-size: 1rem;
+  font-size: 14px;
   border: 0;
   border-radius: 0px 3px 3px 0px;
   font-family: "Open Sans",sans-serif;
-  display: inline-block;
+  display: flex;
   position: absolute;
+  height: 100%;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
   top: 0;
   right: 0;
 }
@@ -217,13 +464,13 @@ form>i{
   margin: 30px 0px;
 }
 p.author{
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: 600;
   color: #fff;
   margin: 0;
 }
 p.post{
-  font-size: 1.0rem;
+  font-size: 14px;
   font-weight: normal;
   color: rgba(255,255,255,0.8);
   margin: 0;
@@ -233,9 +480,6 @@ div.instagram-posts{
   display: inline-block;
   float: right;
   margin-left: 20px;
-}
-.instagram-posts.posts{
-
 }
 .posts div.i-post{
   display: block;
@@ -302,7 +546,7 @@ div.instagram-posts{
 }
 
 .subscribe{
-   height: 70px;
+   min-height: 70px;
    display: flex;
    flex-direction:row;
    background: #3b4b64;
@@ -338,7 +582,7 @@ div.instagram-posts{
    }
    .about-school-container div.text p{
       line-height: 2;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 400;
       text-align: center;
       padding-bottom: 20px;
@@ -372,6 +616,11 @@ div.instagram-posts{
       font-size: 30px;
       width: 100%;
       text-align: center;
+      margin-bottom: 40px;
+   }
+   h2.section-title.lvl-2{
+     font-size: 25px;
+     text-align: center;
    }
    h2.section-title i{
       margin-right: 20px;
@@ -404,13 +653,34 @@ div.instagram-posts{
      font-size: 13px;
      text-decoration: none;
    }
-
+/******************
+Featured Events & Latest News
+******************/
    section.fe-ln{
       background:#f8f8f8;
       padding: 20px 40px;
    }
+   .thumbnail{
+     display: none;
+   }
+  .slide{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 10%;
+  }
+  .section-header h2{
+    text-align: left;
+  }
    section.latest-news{
       margin-top:40px;
+   }
+   .featured-events div.PH img,.latest-news div.PH img{
+     padding: 0px 20%;
+   }
+   .featured-events,.latest-news{
+      position: relative;
+      padding-bottom: 60px;
    }
    .f-event,.l-news{
       display: flex;
@@ -422,6 +692,7 @@ div.instagram-posts{
       border: 1px solid rgba(0,0,0,0.2);
       margin-bottom:15px;
       border-radius:4px;
+      max-width:40%;
    }
    .f-event .date{
       height: 30px;
@@ -459,6 +730,9 @@ div.instagram-posts{
    }
    h3.event-title{
       margin:0;
+      font-size: 18px;
+      padding-bottom: 10px;
+      min-height: 38px;
    }
    h3.event-title.event{
       margin:0;
@@ -466,8 +740,6 @@ div.instagram-posts{
    }
    p.description{
       margin-bottom:0px;
-   }
-   section.quicklinks{
-      display:none;
+      margin-top: 10px;
    }
 }
